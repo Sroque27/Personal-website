@@ -67,14 +67,24 @@
     text-align: center;
   }
   
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
   nav a {
+    display: block;
+    padding: 0.5rem 1rem;
     color: var(--color-gold);
-    margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
   }
   
-  /* Updated hover for nav links */
   nav a:hover,
   nav a:focus {
     color: var(--color-grayish-black);
@@ -99,7 +109,6 @@
     text-decoration: none;
   }
   
-  /* Updated hover for all other links */
   a:hover,
   a:focus {
     color: var(--color-grayish-black);
@@ -132,37 +141,19 @@
     padding: 1rem 0;
     font-size: 0.9rem;
   }
-  /*==================================================
-    Override any leftover link-hover colors
-  ==================================================*/
-  nav a:hover,
-  nav a:focus,
-  a:hover,
-  a:focus {
-    /* Force all link hovers to use our grayish-black */
-    color: var(--color-grayish-black);
-    /* keep the underline if you like, or remove as desired */
-    text-decoration: underline;
-  }
   
   /*===============================================
-  7. Responsive Breakpoints
+    7. Responsive Breakpoints
   ===============================================*/
-
-/* Tablet & small desktop */
-@media (max-width: 900px) {
-    /* Narrow the content block and reduce padding */
+  /* Tablet */
+  @media (max-width: 900px) {
     .site-content {
       padding: 1.5rem;
       max-width: 600px;
     }
-  
-    /* Slightly smaller heading */
     .site-title {
       font-size: 1.75rem;
     }
-  
-    /* Shrink nav padding & link spacing */
     nav {
       padding: 0.5rem 1rem;
     }
@@ -170,31 +161,23 @@
       margin: 0 0.75rem;
       font-size: 0.95rem;
     }
-  
-    /* Scale down sub-headings and body text */
     h2 {
       font-size: 1.35rem;
     }
-    p,
-    li {
+    p, li {
       font-size: 1rem;
     }
   }
   
-  /* Mobile phones */
+  /* Mobile */
   @media (max-width: 600px) {
-    /* Make content full-width with minimal padding */
     .site-content {
       padding: 1rem;
       max-width: 100%;
     }
-  
-    /* Even smaller main title */
     .site-title {
       font-size: 1.5rem;
     }
-  
-    /* Tighter nav styling */
     nav {
       padding: 0.5rem;
     }
@@ -202,13 +185,10 @@
       margin: 0.5rem;
       font-size: 0.9rem;
     }
-  
-    /* Headings & body text optimized for small screens */
     h2 {
       font-size: 1.15rem;
     }
-    p,
-    li {
+    p, li {
       font-size: 0.9rem;
     }
   }
