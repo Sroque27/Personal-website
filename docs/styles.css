@@ -132,3 +132,15 @@
     padding: 1rem 0;
     font-size: 0.9rem;
   }
+  /*==================================================
+    Override any leftover link-hover colors
+  ==================================================*/
+  nav a:hover,
+  nav a:focus,
+  a:hover,
+  a:focus {
+    /* Force all link hovers to use our grayish-black */
+    color: var(--color-grayish-black);
+    /* keep the underline if you like, or remove as desired */
+    text-decoration: underline;
+  }
