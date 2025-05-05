@@ -76,6 +76,21 @@
     text-align: center;
   }
   
+  /* Gallery grid styling */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Ensure images scale and maintain aspect ratio */
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.25rem;
+  }
   /*===============================================
     2. Header & Navigation
   ===============================================*/
