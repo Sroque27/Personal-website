@@ -13,6 +13,18 @@
   }
   
   /*===============================================
+  0. Contrast Mode Variables
+  ===============================================*/
+  /* Default palette lives in :root already */
+
+  /* High-Contrast / Color-Blind–friendly overrides */
+  body.contrast {
+    --color-burgundy:      #005f73; /* deep teal */
+    --color-grayish-black: #0a0a0a; /* pure black */
+    --color-gold:          #ee9b00; /* vivid amber */
+  }
+
+  /*===============================================
     2. Global Reset & Layout
   ===============================================*/
   * {

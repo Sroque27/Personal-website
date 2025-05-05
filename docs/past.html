@@ -17,6 +17,10 @@
         <li><a href="future.html">Future</a></li>
       </ul>
     </nav>
+    <!-- Contrast Toggle -->
+  <button id="contrast-toggle" aria-pressed="false" aria-label="Enable high contrast mode">
+    ⚙️ High Contrast
+  </button>
   </header>
 
   <main class="site-content">
@@ -51,6 +55,24 @@
     // Smooth scroll to top
     backBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <script>
+    // Contrast Mode Toggle
+    const contrastToggle = document.getElementById('contrast-toggle');
+    const body = document.body;
+
+    // Initialize from localStorage
+    if (localStorage.getItem('contrast') === 'on') {
+      body.classList.add('contrast');
+      contrastToggle.setAttribute('aria-pressed', 'true');
+    }
+
+    contrastToggle.addEventListener('click', () => {
+      const isOn = body.classList.toggle('contrast');
+      contrastToggle.setAttribute('aria-pressed', isOn);
+      localStorage.setItem('contrast', isOn ? 'on' : 'off');
     });
   </script>
 </body>
