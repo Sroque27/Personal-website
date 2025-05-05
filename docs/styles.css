@@ -37,16 +37,11 @@
   .site-content {
     flex: 1;
     padding: 2rem;
-  
-    /* ensure it fills the available space up to max-width */
     width: 100%;
     max-width: 800px;
-  
-    /* center it horizontally */
     margin: 0 auto;
   }
   
-  /* (Optional) center text within your achievement sections */
   .achievement {
     text-align: center;
   }
@@ -79,8 +74,10 @@
     font-weight: bold;
   }
   
+  /* Updated hover for nav links */
   nav a:hover,
   nav a:focus {
+    color: var(--color-grayish-black);
     text-decoration: underline;
   }
   
@@ -99,11 +96,13 @@
   
   a {
     color: var(--color-gold);
+    text-decoration: none;
   }
   
+  /* Updated hover for all other links */
   a:hover,
   a:focus {
-    color: var(--color-burgundy);
+    color: var(--color-grayish-black);
   }
   
   /*===============================================
