@@ -143,6 +143,31 @@
     padding: 1rem 0;
     font-size: 0.9rem;
   }
+
+  /*===============================================
+  Back to Top Button
+  ===============================================*/
+  #back-to-top {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      display: none;               /* hidden by default */
+      background-color: var(--color-gold);
+      color: var(--color-grayish-black);
+      border: none;
+      padding: 0.5rem 0.75rem;
+      font-size: 1.25rem;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    #back-to-top.show {
+      display: block;
+    }
+    #back-to-top:focus {
+      outline: 3px solid var(--color-burgundy);
+    }
   
   /*===============================================
     7. Responsive Breakpoints

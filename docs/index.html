@@ -33,5 +33,21 @@
     <p>Instagram: <a href="https://www.instagram.com/ninjafooo/" target="_blank" rel="noopener">@ninjafooo</a></p>
     <p>&copy; 2025 Samuel Roque</p>
   </footer>
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    // Show/hide the button on scroll
+    const backBtn = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) backBtn.classList.add('show');
+      else backBtn.classList.remove('show');
+    });
+
+    // Smooth scroll to top
+    backBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 </html>
