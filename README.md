@@ -29,7 +29,7 @@ Click the ⚙️ High Contrast button to switch to a color-blind–friendly pale
 
 Scroll down and click the ↑ Back to Top button to return to the top of the page.
 
-📱 Responsive & Accessibility Features
+# 📱 Responsive & Accessibility Features
 
 Mobile-first, responsive layout with breakpoints at 900px and 600px.
 
@@ -37,11 +37,11 @@ Sticky footer using a flexbox layout and min-height: 100vh.
 
 WCAG 2.0 AA–friendly: semantic HTML elements, skip link, visible focus styles, ARIA labels, and high-contrast mode.
 
-🌐 Intercultural & Accessibility Statement
+# 🌐 Intercultural & Accessibility Statement
 
 This site is built to accommodate diverse users, including those with visual impairments such as color-blindness, and supports keyboard-only navigation. The design reflects an understanding of cultural and ability differences by providing adaptable color schemes and clear, consistent structure.
 
-✉️ Contact
+# ✉️ Contact
 
 Samuel Roque Email: roque01@allegheny.edu
 Phone: 646-831-9149
