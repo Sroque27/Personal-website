@@ -1,3 +1,6 @@
+/*===============================================
+  1. CSS Variables
+===============================================*/
 :root {
     /* Brand Colors */
     --color-burgundy:      #800020;
@@ -31,10 +34,20 @@
     line-height: 1.6;
   }
   
-  /* Make main grow, pushing footer down */
+  /* Make main grow, pushing footer down,
+     and constrain its width + center it */
   .site-content {
     flex: 1;
     padding: 2rem;
+  
+    /* NEW: center content block */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* (Optional) center text within your achievement sections */
+  .achievement {
+    text-align: center;
   }
   
   /*===============================================
