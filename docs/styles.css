@@ -34,14 +34,15 @@
     line-height: 1.6;
   }
   
-  /* Make main grow, pushing footer down,
-     and constrain its width + center it */
   .site-content {
     flex: 1;
     padding: 2rem;
   
-    /* NEW: center content block */
+    /* ensure it fills the available space up to max-width */
+    width: 100%;
     max-width: 800px;
+  
+    /* center it horizontally */
     margin: 0 auto;
   }
   
