@@ -1,31 +1,27 @@
 /*===============================================
-  1. CSS Variables
+  0. Color-Blind–Friendly Palettes
 ===============================================*/
+
+/* Default palette (accessible to most color-blind types) */
 :root {
-    /* Brand Colors */
-    --color-burgundy:      #800020;
-    --color-grayish-black: #1a1a1a;
-    --color-gold:          #d4af37;
+    --color-burgundy:      #D55E00; /* vermilion */
+    --color-grayish-black: #1a1a1a; /* dark neutral */
+    --color-gold:          #F0E442; /* bright yellow */
   
     /* Typography */
     --font-heading: 'Montserrat', sans-serif;
     --font-body:    'Roboto', sans-serif;
   }
   
-  /*===============================================
-  0. Contrast Mode Variables
-  ===============================================*/
-  /* Default palette lives in :root already */
-
-  /* High-Contrast / Color-Blind–friendly overrides */
+  /* High-Contrast / Extreme Mode */
   body.contrast {
-    --color-burgundy:      #005f73; /* deep teal */
-    --color-grayish-black: #0a0a0a; /* pure black */
-    --color-gold:          #ee9b00; /* vivid amber */
+    --color-burgundy:      #0072B2; /* strong blue */
+    --color-grayish-black: #000000; /* pure black */
+    --color-gold:          #FFFF00; /* full yellow */
   }
-
+  
   /*===============================================
-    2. Global Reset & Layout
+    1. Global Reset & Layout
   ===============================================*/
   * {
     margin: 0;
@@ -33,17 +29,37 @@
     box-sizing: border-box;
   }
   
-  html, body {
-    height: 100%;
+  /* Prevent horizontal scrolling */
+  html {
+    overflow-x: hidden;
   }
   
   body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     font-family: var(--font-body);
     background-color: var(--color-grayish-black);
     color: var(--color-gold);
     line-height: 1.6;
+  }
+  
+  /* Skip-to-Main Link */
+  .skip-link {
+    position: absolute;
+    top: -3rem;
+    left: 1rem;
+    background: var(--color-gold);
+    color: var(--color-grayish-black);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+    border-radius: 0.25rem;
+    transition: top 0.3s;
+  }
+  .skip-link:focus {
+    top: 1rem;
   }
   
   /* Center the main content block */
@@ -55,35 +71,13 @@
     margin: 0 auto;
   }
   
-  /* Achievement sections remain centered text but keep bullets */
+  /* Achievement sections: centered text, keep bullets */
   .achievement {
     text-align: center;
   }
   
   /*===============================================
-  Skip-to-Main Link
-  ===============================================*/
-  .skip-link {
-    position: absolute;
-    top: -3rem;              /* hide it above the viewport */
-    left: 1rem;
-    background: var(--color-gold);
-    color: var(--color-grayish-black);
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    font-weight: bold;
-    z-index: 1000;
-    border-radius: 0.25rem;
-    transition: top 0.3s;
-  }
-  
-  /* When focused, slide into view */
-  .skip-link:focus {
-    top: 1rem;
-  }
-  
-  /*===============================================
-    3. Header & Navigation
+    2. Header & Navigation
   ===============================================*/
   header {
     background-color: var(--color-grayish-black);
@@ -100,18 +94,20 @@
   nav {
     background-color: var(--color-burgundy);
     padding: 0.75rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  /* Nav list: no bullets, flex-centered, with gap */
   nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   
-  /* Nav links: block-level for padding, no extra margin now */
   nav a {
     display: block;
     padding: 0.5rem 1rem;
@@ -120,7 +116,6 @@
     font-weight: bold;
   }
   
-  /* Hover state */
   nav a:hover,
   nav a:focus {
     color: var(--color-grayish-black);
@@ -128,7 +123,7 @@
   }
   
   /*===============================================
-    4. Typography & Links
+    3. Typography & Links
   ===============================================*/
   h1, h2, h3 {
     font-family: var(--font-heading);
@@ -151,7 +146,7 @@
   }
   
   /*===============================================
-    5. Buttons (if used)
+    4. Buttons
   ===============================================*/
   button {
     background-color: var(--color-burgundy);
@@ -168,7 +163,7 @@
   }
   
   /*===============================================
-    6. Footer
+    5. Footer
   ===============================================*/
   footer {
     background-color: var(--color-burgundy);
@@ -177,31 +172,33 @@
     padding: 1rem 0;
     font-size: 0.9rem;
   }
-
+  
   /*===============================================
-  Back to Top Button
+    6. Back to Top Button
   ===============================================*/
   #back-to-top {
-      position: fixed;
-      bottom: 1rem;
-      right: 1rem;
-      display: none;               /* hidden by default */
-      background-color: var(--color-gold);
-      color: var(--color-grayish-black);
-      border: none;
-      padding: 0.5rem 0.75rem;
-      font-size: 1.25rem;
-      border-radius: 0.25rem;
-      cursor: pointer;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    #back-to-top.show {
-      display: block;
-    }
-    #back-to-top:focus {
-      outline: 3px solid var(--color-burgundy);
-    }
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    display: none;
+    background-color: var(--color-gold);
+    color: var(--color-grayish-black);
+    border: none;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.25rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+  
+  #back-to-top.show {
+    display: block;
+  }
+  
+  #back-to-top:focus {
+    outline: 3px solid var(--color-burgundy);
+  }
   
   /*===============================================
     7. Responsive Breakpoints
@@ -240,16 +237,18 @@
       font-size: 1.5rem;
     }
     nav {
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
     }
-    /* Stack the nav items vertically */
     nav ul {
       flex-direction: column;
       gap: 0.5rem;
+      padding: 0;
     }
-    /* Links still have block padding but no extra margins */
     nav a {
-      padding: 0.5rem 0.75rem;
+      width: 100%;
+      padding: 0.5rem 0;
+      text-align: center;
+      box-sizing: border-box;
     }
     h2 {
       font-size: 1.15rem;
