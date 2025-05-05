@@ -11,11 +11,15 @@ https://Sroque27.github.io/
 
 Clone the repository:
 
+```
 git clone https://github.com/Sroque27/Sroque27.github.io.git
+```
 
 Navigate into the project folder:
 
+```
 cd Sroque27.github.io
+```
 
 Open index.html in your web browser (no build step required).
 
