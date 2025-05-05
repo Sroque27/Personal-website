@@ -1,4 +1,4 @@
-# Samuel Roque Portfolio
+## Samuel Roque Portfolio
 
 A Brief Description
 A personal portfolio website showcasing my past achievements, current involvements, and future goals. The site is designed with accessibility and intercultural awareness in mind, offering a color-blind–friendly palette, high-contrast mode, and keyboard navigation enhancements.
@@ -46,3 +46,7 @@ This site is built to accommodate diverse users, including those with visual imp
 Samuel Roque Email: roque01@allegheny.edu
 Phone: 646-831-9149
 Instagram: @ninjafooo
+
+# 📄 License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
